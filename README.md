@@ -12,17 +12,17 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Database-MySQL%208.0.41-blue.svg?style=for-the-badge&logo=mysql" alt="MySQL 8.0.41">
-  <img src="https://img.shields.io/badge/Framework-React%2012.2.0-cyan.svg?style=for-the-badge&logo=react" alt="React 12.2.0">
-  <img src="https://img.shields.io/badge/Styling-Tailwind%20CSS%204.0-06B6D4.svg?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS 4.0">
+  <img src="https://img.shields.io/badge/Framework-React%2019.0.0-cyan.svg?style=for-the-badge&logo=react" alt="React 19.0.0">
+  <img src="https://img.shields.io/badge/Styling-Tailwind%20CSS%204.1.3-06B6D4.svg?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS 4.1.3">
   <img src="https://img.shields.io/badge/Language-Java%2017-orange.svg?style=for-the-badge&logo=coffescrip^y" alt="Java 17">
-  <img src="https://img.shields.io/badge/Framework-Spring%2017-green.svg?style=for-the-badge&logo=spring" alt="Spring 17">
+  <img src="https://img.shields.io/badge/Framework-Spring%2017-green.svg?style=for-the-badge&logo=spring" alt="Spring --">
 </p>
 
-- **⚛️ React**: 12.2.0
+- **⚛️ React**: 19.0.0
 - **🌐 MySQL**: 8.0.41
-- **🎨 Tailwind CSS**: 4.0
+- **🎨 Tailwind CSS**: 4.1.3
 - **☕ Java**: 17
-- **🌱 Spring**: 17
+- **🌱 Spring**: --
 
 *Toutes les autres dépendances sont listées dans le fichier package.json à la racine du projet.*
 
