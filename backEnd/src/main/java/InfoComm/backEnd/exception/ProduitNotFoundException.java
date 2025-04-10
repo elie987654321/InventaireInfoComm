@@ -1,4 +1,4 @@
-package org.example.exception;
+package InfoComm.backEnd.exception;
 
 public class ProduitNotFoundException {
 }
