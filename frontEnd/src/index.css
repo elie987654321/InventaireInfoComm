@@ -15,6 +15,70 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root
+{
+  width: 100%;
+}
+
+@media (max-width : 900px) {
+  .desktop_menu
+  {
+    display: none;
+  }
+}
+
+@media (min-width : 900px) {
+  .hidden_menu_button
+  {
+    display: none;
+  }
+  .phone_menu
+  {
+    display: none;
+  }
+  .bouton_deconnection_phone
+  {
+    display: none;
+  }
+}
+
+.phone_menu
+{
+  font-size: large;
+  background-color: rgb(254, 254, 254);
+  border-color: rgb(11, 84, 157);
+  border-width: 3px;
+  width: 300px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.phone_menu *
+{
+  color: rgb(115, 154, 186);
+}
+
+@media (max-width: 700px ) 
+{  
+  .titre_administration
+  {
+    font-size: 22px;
+  }
+
+  .retour_inventaire
+  {
+    display: none;
+  }
+
+  
+}
+
+.menu_admin span
+{
+  color: black;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;

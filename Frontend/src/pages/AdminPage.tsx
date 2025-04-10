@@ -216,11 +216,11 @@ const InventoryAdminPanel: FC = () => {
             <header className="bg-gray-900 text-gray-600 p-4">
                 <div className="container mx-auto flex justify-between items-center">
                     <div>
-                        <h1 className="text-3xl font-bold text-blue-500">Administration</h1>
+                        <h1 className="titre_administration text-3xl font-bold text-blue-500">Administration</h1>
                         <p className="text-gray-400 text-sm">Gérez les utilisateurs, catégories et paramètres du système</p>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded">
+                        <button className="retour_inventaire bg-white text-blue-600 px-4 py-2 rounded">
                             Retour à l'inventaire
                         </button>
                         <button className="relative">
@@ -253,7 +253,7 @@ const InventoryAdminPanel: FC = () => {
             )}
 
             {/* Navigation Tabs */}
-            <div className="mx-4 mt-4 flex space-x-1 bg-gray-800 rounded-t overflow-hidden">
+            <div className="menu_admin mx-4 mt-4 flex space-x-1 bg-gray-800 rounded-t overflow-hidden">
                 <TabButton
                     active={activeTab === 'utilisateurs'}
                     onClick={() => setActiveTab('utilisateurs')}
