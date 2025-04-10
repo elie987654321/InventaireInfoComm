@@ -61,9 +61,19 @@
     npm run format
     ```
 
-- **🎨 Compiler Tailwind CSS avec le mode veille** :
+- **🧹 Linter le code** :
     ```sh
-    npx tailwindcss -i ./src/index.css -o ./src/style.css --watch
+    npm run lint
+    ```
+
+- **🛠️ Corriger automatiquement les problèmes de lint** :
+    ```sh
+    npm run lint:fix
+    ```
+
+- **🔄 Arrêter les processus sur le port 5173 avant de lancer le développement** :
+    ```sh
+    npm run predev
     ```
 
 ## 📜 Licence
