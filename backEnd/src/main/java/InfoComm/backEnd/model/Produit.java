@@ -12,25 +12,25 @@ public class Produit {
     @Column(name = "prod_modele")
     private String modele;
     @JoinColumn(name = "prod_fab_id", referencedColumnName = "fab_id")
-    private String fabricant;
-    @Column(name = "prod_cat_id")
-    private String categorie;
+    private Long fabricant;
+    @JoinColumn(name = "prod_cat_id", referencedColumnName = "cat_id")
+    private Long categorie;
     @Column(name= "prod_IsDeleted")
     private boolean isDeleted;
 
-    public String getCatgorie() {
+    public Long getCatgorie() {
         return categorie;
     }
 
-    public void setCatgorie(String catgorie) {
-        this.categorie = catgorie;
+    public void setCatgorie(Long categorie) {
+        this.categorie = categorie;
     }
 
-    public String getFabricant() {
+    public Long getFabricant() {
         return fabricant;
     }
 
-    public void setFabricant(String fabricant) {
+    public void setFabricant(Long fabricant) {
         this.fabricant = fabricant;
     }
 
