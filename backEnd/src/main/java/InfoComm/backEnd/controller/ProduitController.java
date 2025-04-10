@@ -25,7 +25,6 @@ public class ProduitController {
 
     public ProduitController(ProduitRepository produitRepository) {
         this.produitRepository = produitRepository;
-        //this.produitValidateur = produitValidateur;
     }
 
     @GetMapping(path = "/produits", produces = {"application/json"})
@@ -36,5 +35,6 @@ public class ProduitController {
 
         return produitRepository.findAll();
     }
+
 }
 

@@ -11,9 +11,11 @@ public class Produit {
     private Integer id;
     @Column(name = "prod_modele")
     private String modele;
+    @Column(name = "prod_fab_id")
     @JoinColumn(name = "prod_fab_id", referencedColumnName = "fab_id")
     private String fabricant;
     @Column(name = "prod_cat_id")
+    @JoinColumn(name = "prod_cat_id", referencedColumnName = "cat_id")
     private String categorie;
 
     public String getCatgorie() {
@@ -42,9 +44,5 @@ public class Produit {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 }
