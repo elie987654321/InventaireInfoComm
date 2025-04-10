@@ -1,6 +1,6 @@
 import {Link, useNavigate} from 'react-router-dom'
 import {useAuth} from '../../store/AuthContext'
-import Logo from '../common/logo'
+import Logo from '../common/Logo'
 import { useState } from 'react'
 
 const Header = () => {

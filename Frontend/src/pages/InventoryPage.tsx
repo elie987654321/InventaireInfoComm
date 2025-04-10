@@ -6,7 +6,7 @@ import {
     CATEGORIES,
     LOW_STOCK_THRESHOLD,
     Product
-} from '../components/data/mockData'
+} from '../Components/data/MockData'
 
 /**
  * Composants réutilisables

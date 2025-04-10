@@ -1,6 +1,6 @@
 import {JSX, useState} from 'react'
 import { useAuth } from '../store/AuthContext'
-import Logo from '../components/common/Logo'
+import Logo from '../Components/common/Logo.tsx'
 
 /**
  * Composant LoginPage

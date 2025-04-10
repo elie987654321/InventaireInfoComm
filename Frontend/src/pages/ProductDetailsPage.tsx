@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useCallback } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../store/AuthContext'
-import { MOCK_PRODUCTS, Product, LOW_STOCK_THRESHOLD } from '../components/data/mockData'
+import { MOCK_PRODUCTS, Product, LOW_STOCK_THRESHOLD } from '../Components/data/MockData'
 
 /**
  * Types

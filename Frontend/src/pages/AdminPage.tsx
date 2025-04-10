@@ -9,8 +9,8 @@ import {
     CriticalProduct,
     StockAlert,
     DashboardStat
-} from '../components/data/mockData'
-import { MOCK_USERS } from '../components/data/mockData'
+} from '../Components/data/MockData'
+import { MOCK_USERS } from '../Components/data/MockData'
 
 /**
  * Panneau d'administration de l'inventaire
