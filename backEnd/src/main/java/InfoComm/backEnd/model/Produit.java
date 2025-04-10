@@ -8,15 +8,15 @@ public class Produit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "prod_id")
-    private Integer id;
+    private Long id;
     @Column(name = "prod_modele")
     private String modele;
-    @Column(name = "prod_fab_id")
     @JoinColumn(name = "prod_fab_id", referencedColumnName = "fab_id")
     private String fabricant;
     @Column(name = "prod_cat_id")
-    @JoinColumn(name = "prod_cat_id", referencedColumnName = "cat_id")
     private String categorie;
+    @Column(name= "prod_IsDeleted")
+    private boolean isDeleted;
 
     public String getCatgorie() {
         return categorie;
@@ -42,7 +42,13 @@ public class Produit {
         this.modele = modele;
     }
 
-    public Integer getId() {
+    public void setIsDeleted(boolean deleted) {this.isDeleted = deleted;}
+
+    public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
