@@ -1,6 +1,7 @@
 import {JSX, useState} from 'react'
 import { useAuth } from '../store/AuthContext'
 import Logo from '../Components/common/Logo.tsx'
+import Background from '../Components/common/background.tsx'
 
 /**
  * Composant LoginPage
@@ -42,8 +43,11 @@ const LoginPage = (): JSX.Element => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+            {/* Background component */}
+            <Background />
+
+            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md relative z-10">
                 {/* Logo de l'application */}
                 <div className="flex justify-center mb-6">
                     <Logo />
@@ -132,6 +136,11 @@ const LoginPage = (): JSX.Element => {
                         {isLoading ? "Connexion en cours..." : "Connexion"}
                     </button>
                 </form>
+            </div>
+
+            {/* Small credit at the bottom */}
+            <div className="absolute bottom-2 text-center w-full text-xs text-gray-600 z-10">
+                <p>© {new Date().getFullYear()} - Système d'inventaire Info-Comm</p>
             </div>
         </div>
     )
