@@ -9,6 +9,8 @@ public class Produit {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "prod_id")
     private Long id;
+    @Column(name = "prod_quantite")
+    private int quantite;
     @Column(name = "prod_modele")
     private String modele;
     @JoinColumn(name = "prod_fab_id", referencedColumnName = "fab_id")

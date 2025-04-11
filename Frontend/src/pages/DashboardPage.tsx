@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useMemo } from 'react'
 import { useAuth } from '../store/AuthContext'
-import AlertDialog from '../components/common/AlertDialog'
-import { MOCK_DASHBOARD_STATS, DashboardStats } from '../components/data/mockData'
+import AlertDialog from '../Components/common/AlertDialog'
+import { MOCK_DASHBOARD_STATS, DashboardStats } from '../Components/data/MockData'
 
 /**
  * Composants réutilisables

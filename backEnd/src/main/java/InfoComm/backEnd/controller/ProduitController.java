@@ -40,7 +40,7 @@ public class ProduitController {
     }
 
     @PostMapping("produits/post")
-    public Long ajouterProduit(@RequestBody Produit produit) {
+    public Long ajouterProduit(@RequestBody Produit produit) throws ProduitInformationInvalidException {
         logger.info("Ajouter un produit: " + produit.toString());
         Long id = -1L;
         //TODO lié message à produitValidateur

@@ -10,8 +10,8 @@ public class Alerte {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ale_id")
     private long id;
-    @Column(name = "ale_quantite")
-    private int quantite;
+    @Column(name = "ale_seuil")
+    private int seuil;
     @Column(name = "ale_message")
     private String message;
     @Column(name = "ale_date")
@@ -31,12 +31,12 @@ public class Alerte {
         return id;
     }
 
-    public int getQuantite() {
-        return quantite;
+    public int getSeuil() {
+        return seuil;
     }
 
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
+    public void setSeuil(int seuil) {
+        this.seuil = seuil;
     }
 
     public String getMessage() {

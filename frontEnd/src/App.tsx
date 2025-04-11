@@ -11,8 +11,8 @@ import AdminPage from './pages/AdminPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 // Composants
-import Layout from './components/layout/Layout'
-import ProtectedRoute from './components/common/ProtectedRoute'
+import Layout from './Components/layout/Layout'
+import ProtectedRoute from './Components/common/ProtectedRoute'
 
 /**
  * Composant principal de l'application gérant le routage et la navigation
