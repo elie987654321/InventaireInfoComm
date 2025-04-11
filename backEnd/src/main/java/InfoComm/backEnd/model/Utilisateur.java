@@ -17,5 +17,5 @@ public class Utilisateur {
     private String motPasse;
     @Column(name = "uti_rol_id")
     @JoinColumn(name = "uti_rol_id",referencedColumnName = "rol_id")
-    private String role;
+    private int roleId;
 }

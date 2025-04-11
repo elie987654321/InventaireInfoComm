@@ -45,9 +45,8 @@ public class ProduitController {
         int id = -1;
         //TODO lié message à produitValidateur
         String message = "";
-        Produit produit1 = produit;
         if(message.equals("")) {
-            id = produitRepository.save(produit1).getId();
+            id = produitRepository.save(produit).getId();
             logger.info("Nouveau produit entré avec l'id: " + id);
         }
         else {
