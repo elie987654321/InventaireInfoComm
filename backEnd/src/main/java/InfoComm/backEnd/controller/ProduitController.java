@@ -40,13 +40,14 @@ public class ProduitController {
     }
 
     @PostMapping("produits/post")
-    public Long ajouterProduit(@RequestBody Produit produit) throws ProduitInformationInvalidException {
+    public int ajouterProduit(@RequestBody Produit produit) throws ProduitInformationInvalidException {
         logger.info("Ajouter un produit: " + produit.toString());
-        Long id = -1L;
+        int id = -1;
         //TODO lié message à produitValidateur
         String message = "";
+        Produit produit1 = produit;
         if(message.equals("")) {
-            id = produitRepository.save(produit).getId();
+            id = produitRepository.save(produit1).getId();
             logger.info("Nouveau produit entré avec l'id: " + id);
         }
         else {
@@ -63,7 +64,7 @@ public class ProduitController {
         }
 
         Produit produit = produitOptionnel.get();
-        produit.setIsDeleted(false);
+        produit.setDeleted(false);
         logger.info("Produit supprimé: " + id);
 
         return new ResponseEntity<>(produit, HttpStatus.OK);
@@ -79,17 +80,17 @@ public class ProduitController {
         Produit produit = produitOptionnel.get();
         logger.info("Modification du produit suivant: " + id);
 
-        if(produitPartiel.getCatgorie() != null) {
-            logger.info(produit.getCatgorie() + " -> " + produitPartiel.getCatgorie());
-            produit.setCatgorie(produitPartiel.getCatgorie());
-            warn = false;
-        }
-
-        if(produitPartiel.getFabricant() != null) {
-            logger.info(produit.getFabricant() + " -> " + produitPartiel.getFabricant());
-            produit.setFabricant(produitPartiel.getFabricant());
-            warn = false;
-        }
+//        if(produitPartiel.getCategorie() != null) {
+//            logger.info(produit.getCategorie() + " -> " + produitPartiel.getCategorie());
+//            produit.setCategorie(produitPartiel.getCategorie());
+//            warn = false;
+//        }
+//
+//        if(produitPartiel.getFabricant() != null) {
+//            logger.info(produit.getFabricant() + " -> " + produitPartiel.getFabricant());
+//            produit.setFabricant(produitPartiel.getFabricant());
+//            warn = false;
+//        }
 
         if(produitPartiel.getModele() != null) {
             logger.info(produit.getModele() + " -> " + produitPartiel.getModele());
