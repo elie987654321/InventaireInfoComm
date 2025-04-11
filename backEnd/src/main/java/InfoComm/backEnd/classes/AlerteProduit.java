@@ -1,5 +1,9 @@
-package InfoComm.backEnd.model;
+package InfoComm.backEnd.classes;
 
+import InfoComm.backEnd.model.Alerte;
+import InfoComm.backEnd.model.Produit;
+
+//Ajoute des informations a une alerte de base pour le front end
 public class AlerteProduit
 {
     private Alerte alerte;
