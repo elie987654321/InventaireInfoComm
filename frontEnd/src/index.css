@@ -82,6 +82,10 @@
   background-color: #1a1a1a;
 }
 
+.bg-black-900 {
+  background-color: #000;
+}
+
 .bg-white-0 {
   background-color: #fff;
 }
