@@ -1,10 +1,14 @@
 package InfoComm.backEnd.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@NoArgsConstructor
+@Getter
+@Setter
 public class Utilisateur {
     @Id
     @Column(name = "uti_courriel")
@@ -14,28 +18,4 @@ public class Utilisateur {
     @Column(name = "uti_rol_id")
     @JoinColumn(name = "uti_rol_id",referencedColumnName = "rol_id")
     private String role;
-
-    public String getCourriel() {
-        return courriel;
-    }
-
-    public void setCourriel(String courriel) {
-        this.courriel = courriel;
-    }
-
-    public String getMotPasse() {
-        return motPasse;
-    }
-
-    public void setMotPasse(String motPasse) {
-        this.motPasse = motPasse;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
 }

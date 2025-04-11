@@ -1,15 +1,19 @@
 package InfoComm.backEnd.model;
 
 import jakarta.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.sql.Date;
 @Entity
+@NoArgsConstructor
+@Getter
+@Setter
 public class Alerte {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ale_id")
-    private long id;
+    private int id;
     @Column(name = "ale_seuil")
     private int seuil;
     @Column(name = "ale_message")
@@ -19,40 +23,4 @@ public class Alerte {
     @Column(name = "ale_prod_id")
     @JoinColumn(name = "ale_prod_id",referencedColumnName = "prod_id")
     private long produitId;
-
-    public long getId() {
-        return id;
-    }
-
-    public int getSeuil() {
-        return seuil;
-    }
-
-    public void setSeuil(int seuil) {
-        this.seuil = seuil;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public long getProduitId() {
-        return produitId;
-    }
-
-    public void setProduitId(long produitId) {
-        this.produitId = produitId;
-    }
 }
