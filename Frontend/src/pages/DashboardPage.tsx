@@ -169,7 +169,7 @@ const DashboardPage: FC = () => {
                                         <div className="flex justify-between">
                                             <button
                                                 onClick={() => handleAlertClick(alert.message)}
-                                                className="text-sm font-medium text-blue-600 hover:underline"
+                                                className="text-sm font-medium text-white hover:text-blue-600 bg-black-800 hover:underline"
                                             >
                                                 {alert.message}
                                             </button>

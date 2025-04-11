@@ -64,7 +64,7 @@ const Header = () => {
                         </div>
                         <button
                             onClick={handleLogout}
-                            className="text-sm flex items-center text-white hover:text-blue-600">
+                            className="text-sm bg-black-800 flex items-center text-white hover:text-blue-600">
                             <LogOut size={18} className="mr-1" />
                             Déconnexion
                         </button>
@@ -72,7 +72,7 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden z-20 p-2 rounded-md focus:outline-none"
+                        className="md:hidden bg-black-800 z-20 p-2 rounded-md focus:outline-none"
                         onClick={toggleMobileMenu}
                         aria-label="Toggle menu"
                     >

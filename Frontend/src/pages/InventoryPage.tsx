@@ -258,7 +258,7 @@ const InventoryPage: FC = () => {
 
                     <button
                         onClick={() => setShowFilters(!showFilters)}
-                        className="flex items-center justify-center border-2 border-gray-300 bg-white hover:bg-gray-50 text-white hover:text-blue-600 py-2 px-4 rounded-md"
+                        className="flex items-center justify-center border-2 border-gray-300 bg-black-800 text-white hover:text-blue-600 py-2 px-4 rounded-md"
                     >
                         <SlidersHorizontal size={18} className="mr-1"/>
                         <span className="whitespace-nowrap">Filtres et tri</span>
@@ -451,7 +451,7 @@ const InventoryPage: FC = () => {
                                                         <Link to={`/inventory/${product.id}/edit`} className="text-blue-600 hover:text-blue-900" title="Modifier">
                                                             <Edit size={18}/>
                                                         </Link>
-                                                        <button className="text-red-600 hover:text-red-900" title="Supprimer">
+                                                        <button className="bg-black-800 text-red-600 hover:text-red-900" title="Supprimer">
                                                             <Trash2 size={18}/>
                                                         </button>
                                                     </>

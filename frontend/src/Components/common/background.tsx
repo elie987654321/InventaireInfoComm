@@ -13,7 +13,7 @@ const Background: React.FC<BackgroundProps> = ({ className = '' }) => {
     return (
         <div className={`fixed inset-0 -z-10 ${className}`}>
             {/* Dégradé de fond principal */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-blue-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-br bg-white-0 from-gray-100 to-blue-50"></div>
 
             {/* Motif de réseau abstrait */}
             <div className="absolute inset-0 opacity-[0.03]"

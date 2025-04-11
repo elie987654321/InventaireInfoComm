@@ -78,6 +78,22 @@
   color: black;
 }
 
+.bg-black-800 {
+  background-color: #1a1a1a;
+}
+
+.bg-white-0 {
+  background-color: #fff;
+}
+
+.bg-white-100 {
+  background-color: #f1f1f1;
+}
+
+.border-color-black {
+  border-color: black;
+}
+
 
 a {
   font-weight: 500;
