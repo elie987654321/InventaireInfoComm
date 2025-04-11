@@ -49,7 +49,7 @@ const LoginPage = (): JSX.Element => {
                     <Logo />
                 </div>
 
-                <h1 className="text-2xl font-bold text-center mb-6">Connexion</h1>
+                <h1 className="text-2xl font-bold text-gray-600 text-center mb-6">Connexion</h1>
 
                 <form onSubmit={handleSubmit}>
                     {/* Champ de saisie du nom d'utilisateur */}

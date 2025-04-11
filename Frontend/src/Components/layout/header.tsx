@@ -60,11 +60,11 @@ const Header = () => {
                     <div className="hidden md:flex items-center space-x-6">
                         <div className="flex items-center">
                             <User size={18} className="mr-2 text-blue-700" />
-                            <span className="text-sm font-medium">{user?.username}</span>
+                            <span className="text-sm text-gray-600 font-medium">{user?.username}</span>
                         </div>
                         <button
                             onClick={handleLogout}
-                            className="text-sm flex items-center text-gray-700 hover:text-blue-600">
+                            className="text-sm flex items-center text-white hover:text-blue-600">
                             <LogOut size={18} className="mr-1" />
                             Déconnexion
                         </button>
@@ -77,9 +77,9 @@ const Header = () => {
                         aria-label="Toggle menu"
                     >
                         {mobileMenuOpen ? (
-                            <X size={24} className="text-blue-700" />
+                            <X size={24} className="text-white" />
                         ) : (
-                            <Menu size={24} className="text-blue-700" />
+                            <Menu size={24} className="text-white" />
                         )}
                     </button>
 
