@@ -9,8 +9,8 @@ import {
     CriticalProduct,
     StockAlert,
     DashboardStat
-} from '../components/data/mockData'
-import { MOCK_USERS } from '../components/data/mockData'
+} from '../Components/data/MockData'
+import { MOCK_USERS } from '../Components/data/MockData'
 
 /**
  * Panneau d'administration de l'inventaire
@@ -36,7 +36,7 @@ const InventoryAdminPanel: FC = () => {
                                                                                                            }) => (
         <button
             onClick={onClick}
-            className="flex items-center bg-gray-900 text-white px-4 py-2 rounded"
+            className="flex items-center bg-black-800 text-white hover:text-blue-600 px-4 py-2 rounded"
         >
             {icon && <span className="mr-2">{icon}</span>}
             {children}
@@ -51,8 +51,8 @@ const InventoryAdminPanel: FC = () => {
                                                                                                                     }) => (
         <button
             onClick={onClick}
-            className={`flex items-center space-x-1 px-6 py-3 ${
-                active ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-gray-700'
+            className={`bg-white-100 flex items-center space-x-1 px-6 py-3 ${
+                active ? 'bg-blue-600 text-white' : 'text-gray-500 hover:bg-gray-700'
             }`}
         >
             <span>{children}</span>
@@ -82,7 +82,7 @@ const InventoryAdminPanel: FC = () => {
     const TabContent = {
         utilisateurs: (
             <div className="p-6">
-                <div className="flex justify-end mb-4">
+                <div className="flex bg- justify-end mb-4">
                     <ActionButton icon={<Plus size={18}/>}>Nouvel utilisateur</ActionButton>
                 </div>
                 <div className="overflow-x-auto bg-white rounded">
@@ -111,8 +111,8 @@ const InventoryAdminPanel: FC = () => {
                                 <td className="px-4 py-3 text-gray-600">{user.lastConnection}</td>
                                 <td className="px-4 py-3">
                                     <div className="flex space-x-2">
-                                        <button className="bg-blue-100 text-blue-800 px-3 py-1 rounded">Modifier</button>
-                                        <button className="bg-red-100 text-red-800 px-3 py-1 rounded">Supprimer</button>
+                                        <button className="bg-white-100 text-blue-800 px-3 py-1 rounded">Modifier</button>
+                                        <button className="bg-white-100 text-red-800 px-3 py-1 rounded">Supprimer</button>
                                     </div>
                                 </td>
                             </tr>
@@ -139,13 +139,13 @@ const InventoryAdminPanel: FC = () => {
                         </thead>
                         <tbody>
                         {categories.map((category) => (
-                            <tr key={category.id} className="border-b">
+                            <tr key={category.id} className="border-color-black border-b">
                                 <td className="px-4 py-3 text-blue-600">{category.name}</td>
                                 <td className="px-4 py-3 text-gray-600">{category.productCount} produits</td>
                                 <td className="px-4 py-3">
                                     <div className="flex space-x-2">
-                                        <button className="bg-blue-100 text-blue-800 px-3 py-1 rounded">Modifier</button>
-                                        <button className="bg-red-100 text-red-800 px-3 py-1 rounded">Supprimer</button>
+                                        <button className="bg-white-100 text-blue-800 px-3 py-1 rounded">Modifier</button>
+                                        <button className="bg-white-100 text-red-800 px-3 py-1 rounded">Supprimer</button>
                                     </div>
                                 </td>
                             </tr>
@@ -213,17 +213,17 @@ const InventoryAdminPanel: FC = () => {
     return (
         <div className="min-h-screen bg-gray-100">
             {/* Header */}
-            <header className="bg-gray-900 text-gray-600 p-4">
+            <header className="bg-gray-200 text-gray-700 p-4">
                 <div className="container mx-auto flex justify-between items-center">
                     <div>
                         <h1 className="titre_administration text-3xl font-bold text-blue-500">Administration</h1>
                         <p className="text-gray-400 text-sm">Gérez les utilisateurs, catégories et paramètres du système</p>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <button className="retour_inventaire bg-white text-blue-600 px-4 py-2 rounded">
+                        <button className="retour_inventaire bg-black-800 text-white hover:text-blue-600 px-4 py-2 rounded">
                             Retour à l'inventaire
                         </button>
-                        <button className="relative">
+                        <button className="relative bg-white-100">
                             <Bell/>
                             <span className="absolute -top-1 -right-1 bg-red-500 text-gray-600 text-xs rounded-full w-5 h-5 flex items-center justify-center">
                 {criticalProducts.length}
@@ -253,7 +253,7 @@ const InventoryAdminPanel: FC = () => {
             )}
 
             {/* Navigation Tabs */}
-            <div className="menu_admin mx-4 mt-4 flex space-x-1 bg-gray-800 rounded-t overflow-hidden">
+            <div className="menu_admin mx-4 mt-4 flex space-x-1 bg-gray-100 rounded-t overflow-hidden">
                 <TabButton
                     active={activeTab === 'utilisateurs'}
                     onClick={() => setActiveTab('utilisateurs')}
@@ -275,7 +275,6 @@ const InventoryAdminPanel: FC = () => {
                 <TabButton
                     active={activeTab === 'rapports'}
                     onClick={() => setActiveTab('rapports')}
-                    showIcon={false}
                 >
                     Rapports
                 </TabButton>

@@ -10,16 +10,16 @@ const Footer = () => {
                     </div>
 
                     <div className="flex space-x-4 mt-2 md:mt-0">
-                        <a href="#" className="text-sm text-gray-600 hover:text-blue-600">
+                        <a href="https://www.infocomm.ca/fr/terms-and-conditions/" target="_blank" className="text-sm text-gray-600 hover:text-blue-600">
                             Termes et conditions
                         </a>
-                        <a href="#" className="text-sm text-gray-600 hover:text-blue-600">
+                        <a href="https://www.infocomm.ca/fr/privacy-policy/" target="_blank" className="text-sm text-gray-600 hover:text-blue-600">
                             Politique de confidentialité
                         </a>
                     </div>
 
                     <div className="text-xs text-gray-500 mt-2 md:mt-0">
-                        Ce site a été réalisé par LV2 Technologies
+                        Ce site a été réalisé par Team4
                     </div>
                 </div>
             </div>

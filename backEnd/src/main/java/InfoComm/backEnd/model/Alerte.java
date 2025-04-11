@@ -23,4 +23,5 @@ public class Alerte {
     @Column(name = "ale_prod_id")
     @JoinColumn(name = "ale_prod_id",referencedColumnName = "prod_id")
     private long produitId;
+
 }

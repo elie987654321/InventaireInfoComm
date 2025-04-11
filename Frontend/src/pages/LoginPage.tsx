@@ -1,6 +1,7 @@
 import {JSX, useState} from 'react'
 import { useAuth } from '../store/AuthContext'
-import Logo from '../components/common/Logo'
+import Logo from '../Components/common/Logo.tsx'
+import Background from '../Components/common/background.tsx'
 
 /**
  * Composant LoginPage
@@ -42,14 +43,17 @@ const LoginPage = (): JSX.Element => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+            {/* Background component */}
+            <Background />
+
+            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md relative z-10">
                 {/* Logo de l'application */}
                 <div className="flex justify-center mb-6">
                     <Logo />
                 </div>
 
-                <h1 className="text-2xl font-bold text-center mb-6">Connexion</h1>
+                <h1 className="text-2xl font-bold text-gray-600 text-center mb-6">Connexion</h1>
 
                 <form onSubmit={handleSubmit}>
                     {/* Champ de saisie du nom d'utilisateur */}
@@ -90,7 +94,7 @@ const LoginPage = (): JSX.Element => {
                             {/* Bouton pour afficher/masquer le mot de passe */}
                             <button
                                 type="button"
-                                className="absolute inset-y-0 right-0 px-3 text-sm text-gray-500 hover:text-gray-700"
+                                className="absolute bg-black-800 inset-y-0 right-0 px-3 text-sm text-white hover:text-blue-600"
                                 onClick={togglePasswordVisibility}
                                 aria-label={showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
                                 data-testid="toggle-password-visibility"
@@ -125,13 +129,18 @@ const LoginPage = (): JSX.Element => {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                        className="w-full bg-black-800 text-white hover:text-blue-600 font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
                         aria-busy={isLoading}
                         data-testid="login-button"
                     >
                         {isLoading ? "Connexion en cours..." : "Connexion"}
                     </button>
                 </form>
+            </div>
+
+            {/* Small credit at the bottom */}
+            <div className="absolute bottom-2 text-center w-full text-xs text-gray-600 z-10">
+                <p>© {new Date().getFullYear()} - Système d'inventaire Info-Comm</p>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useCallback } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../store/AuthContext'
-import { MOCK_PRODUCTS, Product, LOW_STOCK_THRESHOLD } from '../components/data/mockData'
+import { MOCK_PRODUCTS, Product, LOW_STOCK_THRESHOLD } from '../Components/data/MockData'
 
 /**
  * Types
@@ -62,7 +62,7 @@ const ActionButton: FC<{
 }> = ({ type, onClick, to, children }) => {
     const buttonClasses = type === 'edit'
         ? "bg-white hover:bg-gray-100 text-gray-600 px-4 py-2 rounded-md flex items-center"
-        : "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md flex items-center";
+        : "bg-black-800 hover:bg-white-100 text-white hover:text-blue-600 px-4 py-2 rounded-md flex items-center";
 
     const iconPath = type === 'edit'
         ? "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
@@ -176,7 +176,7 @@ const ProductDetailsPage: FC = () => {
             <div className="mb-6 flex justify-between items-center">
                 <div>
                     <BackButton />
-                    <h1 className="text-2xl font-bold mt-2">{product.name}</h1>
+                    <h1 className="text-2xl text-gray-600 font-bold mt-2">{product.name}</h1>
                 </div>
 
                 {user?.role === 'admin' && (
